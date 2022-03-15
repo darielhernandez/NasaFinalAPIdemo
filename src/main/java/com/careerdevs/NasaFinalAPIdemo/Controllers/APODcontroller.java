@@ -29,6 +29,7 @@ public class APODcontroller {
         String apodKey= env.getProperty("APOD_KEY", "IfwytowWwR35YpEAuZciPweFCX16uWvUEqPVJCyR");
         String URL= "https://api.nasa.gov/planetary/apod?api_key=" +apodKey;
         Object response= restTemplate.getForObject(URL, Object.class);
+
         System.out.println(response);
         return response;
 
